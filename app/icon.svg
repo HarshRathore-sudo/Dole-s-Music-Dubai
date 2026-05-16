@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="100%" style="stop-color:#0a0a0a"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f5d48b"/>
+      <stop offset="40%" style="stop-color:#d4a44a"/>
+      <stop offset="70%" style="stop-color:#c8963e"/>
+      <stop offset="100%" style="stop-color:#b8860b"/>
+    </linearGradient>
+    <linearGradient id="goldBright" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffe4a0"/>
+      <stop offset="50%" style="stop-color:#ffd700"/>
+      <stop offset="100%" style="stop-color:#f5d48b"/>
+    </linearGradient>
+    <linearGradient id="goldRing" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f5e6b8"/>
+      <stop offset="100%" style="stop-color:#d4a44a"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background circle -->
+  <circle cx="256" cy="256" r="256" fill="url(#bg)"/>
+  <!-- Decorative ring -->
+  <circle cx="256" cy="256" r="240" fill="none" stroke="url(#goldRing)" stroke-width="2.5" opacity="0.4"/>
+  <circle cx="256" cy="256" r="232" fill="none" stroke="url(#goldRing)" stroke-width="1.2" opacity="0.2"/>
+
+  <!-- Letter D - bold serif, positioned left -->
+  <path d="M52,170 L52,370 L120,370 C185,370 222,330 222,270 C222,210 185,170 120,170 Z M88,204 L115,204 C165,204 188,228 188,270 C188,312 165,336 115,336 L88,336 Z" fill="url(#gold)"/>
+  <!-- D serifs -->
+  <rect x="44" y="167" width="85" height="8" rx="2" fill="url(#gold)"/>
+  <rect x="44" y="367" width="85" height="8" rx="2" fill="url(#gold)"/>
+
+  <!-- Apostrophe ' - bright golden, large and prominent -->
+  <circle cx="252" cy="148" r="16" fill="url(#goldBright)"/>
+  <path d="M244,155 C244,155 248,175 248,188 C248,200 243,208 236,212 L244,220 C258,212 264,198 264,182 C264,167 256,153 248,148 Z" fill="url(#goldBright)"/>
+
+  <!-- Letter M - bold serif, positioned right -->
+  <path d="M280,370 L280,170 L324,170 L370,310 L416,170 L460,170 L460,370 L428,370 L428,225 L382,365 L358,365 L312,225 L312,370 Z" fill="url(#gold)"/>
+  <!-- M serifs -->
+  <rect x="272" y="167" width="44" height="8" rx="2" fill="url(#gold)"/>
+  <rect x="424" y="167" width="44" height="8" rx="2" fill="url(#gold)"/>
+  <rect x="272" y="367" width="48" height="8" rx="2" fill="url(#gold)"/>
+  <rect x="420" y="367" width="48" height="8" rx="2" fill="url(#gold)"/>
+</svg>

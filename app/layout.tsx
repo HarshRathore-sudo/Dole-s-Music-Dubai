@@ -23,6 +23,10 @@ const cormorant = Cormorant_Garamond({
 export const metadata: Metadata = {
   title: "Serving Dubai | Dole's Music",
   description: "Premium mixing, mastering, and sound design delivered remotely to Dubai's artists, brands, and storytellers — studio-quality results, anywhere you are.",
+  icons: {
+    icon: '/icon.svg',
+    apple: '/icon.svg',
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
