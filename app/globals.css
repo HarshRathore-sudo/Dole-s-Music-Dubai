@@ -1,9 +1,24 @@
 @import "tailwindcss";
 
+/* Base: all text uses Cormorant Garamond (elegant serif with cursive quality) */
+body {
+  font-family: var(--font-body), 'Georgia', serif;
+}
+
+/* Headings: Playfair Display (luxury editorial serif) */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-playfair), 'Georgia', serif;
+}
+
 .font-playfair {
-  font-family: var(--font-playfair), sans-serif;
+  font-family: var(--font-playfair), 'Georgia', serif;
 }
 
 .font-body {
-  font-family: var(--font-body), serif;
+  font-family: var(--font-body), 'Georgia', serif;
+}
+
+.font-body-italic {
+  font-family: var(--font-body), 'Georgia', serif;
+  font-style: italic;
 }
