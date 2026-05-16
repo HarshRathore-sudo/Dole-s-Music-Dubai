@@ -37,7 +37,6 @@ const BRANDS = [
 
 /* ─── Portfolio (real credits with real YouTube IDs) ─── */
 const PORTFOLIO = [
-  { translationKey: 'aajKiRaat' as const, categoryKey: 'film' as const, ytId: 'roz9sXFkTuE' },
   { translationKey: 'jaadu' as const, categoryKey: 'film' as const, ytId: 'pgsBaKYTi1M' },
   { translationKey: 'paisa' as const, categoryKey: 'film' as const, ytId: 'XsOPuQ9Z7Eo' },
   { translationKey: 'jumehraat' as const, categoryKey: 'single' as const, ytId: 'PvjQMOJfDKU' },
@@ -54,27 +53,25 @@ const PORTFOLIO = [
 const BOOKING_LINK = 'https://tealfeed.com/doles_music/connect/call?callType=69f0b4eb03abf7c5fa258689';
 
 /* ─── Beats Library — raw data (EN keys); resolved to lang at render time ─── */
+/* HLS streaming via CloudFront CDN — folder keys map to /audio/hls/{KEY}/playlist.m3u8 */
 const BEATS_RAW = [
-  { id: 'b1',  titleKey: 'Afro House Beat',                     genreKey: 'Afro / House',  src: '/beats/Afro-House-Beat.mp3' },
-  { id: 'b2',  titleKey: 'Dancefloor (118 BPM)',                genreKey: 'Afro / House',  src: '/beats/Dancefloor-118.mp3' },
-  { id: 'b3',  titleKey: 'Arabic Trap Beat',                    genreKey: 'Arabic Trap',   src: '/beats/Arabic-Trap-Beat.mp3' },
-  { id: 'b4',  titleKey: 'Arabic Trap Beat (100 BPM)',          genreKey: 'Arabic Trap',   src: '/beats/Arabic-Trap-Beat-100BPM.mp3' },
-  { id: 'b5',  titleKey: 'Shamur Beat (108 BPM, Dm)',           genreKey: 'Desi',          src: '/beats/Shamur-Beat-108BPM.mp3' },
-  { id: 'b6',  titleKey: 'Dark Jersey Drill Beat',              genreKey: 'Drill',         src: '/beats/Dark-Jersey-Drill-Beat.mp3' },
-  { id: 'b7',  titleKey: 'Indian Drill Beat',                   genreKey: 'Drill',         src: '/beats/Indian-Drill-Beat-Demo.mp3' },
-  { id: 'b8',  titleKey: 'Indian Drill Beat III',               genreKey: 'Drill',         src: '/beats/Indian-Drill-Beat-Demo-3.mp3' },
-  { id: 'b9',  titleKey: 'Afro Drill x Jersey (140 BPM)',       genreKey: 'Drill',         src: '/beats/Afro-Drill-X-Jersey-Beat-140BPM.mp3' },
-  { id: 'b10', titleKey: 'Khaas Freestyle Type Beat (98 BPM)',  genreKey: 'Hip-Hop',       src: '/beats/Khaas-Freestyle-Type-Beat-98BPM.mp3' },
-  { id: 'b11', titleKey: 'Scott Storch Type Beat',              genreKey: 'Hip-Hop',       src: '/beats/Scott-Storch-Type-Beat.mp3' },
-  { id: 'b12', titleKey: 'Torn Speaker (100 BPM)',              genreKey: 'Hip-Hop',       src: '/beats/Torn-Speaker-100BPM.mp3' },
-  { id: 'b13', titleKey: 'Mama Beats 23',                       genreKey: 'Hip-Hop',       src: '/beats/Mama-Beats-23-For-Rohu.mp3' },
-  { id: 'b14', titleKey: 'Mama Beats 24',                       genreKey: 'Hip-Hop',       src: '/beats/Mama-Beats-24-For-Rohu.mp3' },
-  { id: 'b15', titleKey: 'Mama Beats 46',                       genreKey: 'Hip-Hop',       src: '/beats/Mama-Beats-46.mp3' },
-  { id: 'b16', titleKey: 'Mama Beats 48',                       genreKey: 'Hip-Hop',       src: '/beats/Mama-Beats-48.mp3' },
-  { id: 'b17', titleKey: 'Mama Beats 49',                       genreKey: 'Hip-Hop',       src: '/beats/Mama-Beats-49.mp3' },
-  { id: 'b18', titleKey: 'Mama Beats 51',                       genreKey: 'Hip-Hop',       src: '/beats/Mama-Beats-51.mp3' },
-  { id: 'b19', titleKey: 'Mama Beats 70',                       genreKey: 'Hip-Hop',       src: '/beats/Mama-Beats-70.mp3' },
-  { id: 'b20', titleKey: 'Punjabi Trap Beat',                   genreKey: 'Punjabi Trap',  src: '/beats/Punjabi-Trap-Beat.mp3' },
+  { id: 'b1',  titleKey: 'Afro House Beat',                     genreKey: 'Afro / House',  src: 'AFRO_HOUSE_BEAT' },
+  { id: 'b2',  titleKey: 'Dancefloor (118 BPM)',                genreKey: 'Afro / House',  src: 'DANCEFLOOR_118' },
+  { id: 'b3',  titleKey: 'Arabic Trap Beat',                    genreKey: 'Arabic Trap',   src: 'ARABIC_TRAP_BEAT' },
+  { id: 'b4',  titleKey: 'Arabic Trap Beat (100 BPM)',          genreKey: 'Arabic Trap',   src: 'ARABIC_TRAP_BEAT_100BPM' },
+  { id: 'b5',  titleKey: 'Dark Jersey Drill Beat',              genreKey: 'Drill',         src: 'DARK_JERSEY_DRILL_BEAT' },
+  { id: 'b6',  titleKey: 'Indian Drill Beat',                   genreKey: 'Drill',         src: 'INDIAN_DRILL_BEAT_DEMO' },
+  { id: 'b7',  titleKey: 'Indian Drill Beat III',               genreKey: 'Drill',         src: 'INDIAN_DRILL_BEAT_DEMO_3' },
+  { id: 'b8',  titleKey: 'Khaas Freestyle Type Beat (98 BPM)',  genreKey: 'Hip-Hop',       src: 'KHAAS_FREESTYLE_TYPE_BEAT_98BPM' },
+  { id: 'b9',  titleKey: 'Scott Storch Type Beat',              genreKey: 'Hip-Hop',       src: 'SCOTT_STORCH_TYPE_BEAT' },
+  { id: 'b10', titleKey: 'Mama Beats 23',                       genreKey: 'Hip-Hop',       src: 'MAMA_BEATS_23_FOR_ROHU' },
+  { id: 'b11', titleKey: 'Mama Beats 24',                       genreKey: 'Hip-Hop',       src: 'MAMA_BEATS_24_FOR_ROHU' },
+  { id: 'b12', titleKey: 'Mama Beats 46',                       genreKey: 'Hip-Hop',       src: 'MAMA_BEATS_46' },
+  { id: 'b13', titleKey: 'Mama Beats 48',                       genreKey: 'Hip-Hop',       src: 'MAMA_BEATS_48' },
+  { id: 'b14', titleKey: 'Mama Beats 49',                       genreKey: 'Hip-Hop',       src: 'MAMA_BEATS_49' },
+  { id: 'b15', titleKey: 'Mama Beats 51',                       genreKey: 'Hip-Hop',       src: 'MAMA_BEATS_51' },
+  { id: 'b16', titleKey: 'Mama Beats 70',                       genreKey: 'Hip-Hop',       src: 'MAMA_BEATS_70' },
+  { id: 'b17', titleKey: 'Punjabi Trap Beat',                   genreKey: 'Punjabi Trap',  src: 'PUNJABI_TRAP_BEAT' },
 ];
 
 function getBeatsData(lang: Lang): Beat[] {
@@ -88,39 +85,37 @@ function getBeatsData(lang: Lang): Beat[] {
 }
 
 /* ─── Before / After audio samples — keyed by package title (EN) ─── */
+/* HLS streaming via CloudFront CDN — folder keys map to /audio/hls/{KEY}/playlist.m3u8 */
 const PACKAGE_SAMPLES: Record<string, CardAudioSample> = {
   'The \u201CHands-Free\u201D Mix': {
-    trackTitle: 'Behte Rehte',
-    artist: 'Param & Doleshwar Raj',
-    src: '/beats/Behte-Rehte-Param-and-Doleshwar-Raj.mp3',
+    trackTitle: 'Vocal Production',
+    artist: "Dole's Music",
+    beforeSrc: 'VOICE_PROD_BEFORE',
+    afterSrc: 'VOICE_PROD_AFTER',
   },
   'The Premium Mix': {
-    trackTitle: 'Ant Shant',
-    artist: 'SSD',
-    src: '/beats/Ant-Shant-SSD.mp3',
+    trackTitle: 'Production 101',
+    artist: "Dole's Music",
+    beforeSrc: 'PROD_101_BEFORE',
+    afterSrc: 'PROD_101_AFTER',
   },
   'Vocal Production': {
     trackTitle: 'Vocal Production',
     artist: "Dole's Music",
-    beforeSrc: '/audio/Voice-Prod-Before.mp3',
-    afterSrc: '/audio/Voice-Prod-After.mp3',
+    beforeSrc: 'VOICE_PROD_BEFORE',
+    afterSrc: 'VOICE_PROD_AFTER',
   },
   'Production 101': {
     trackTitle: 'Production 101',
     artist: "Dole's Music",
-    beforeSrc: '/audio/Prod-101-Before.mp3',
-    afterSrc: '/audio/Prod-101-After.mp3',
+    beforeSrc: 'PROD_101_BEFORE',
+    afterSrc: 'PROD_101_AFTER',
   },
   'Premium Prod': {
     trackTitle: 'Premium Production',
     artist: "Dole's Music",
-    beforeSrc: '/audio/Premium-Prod-Before.mp3',
-    afterSrc: '/audio/Premium-Prod-After.mp3',
-  },
-  'Reel Audio': {
-    trackTitle: 'Gumshuda',
-    artist: 'Param & Doleshwar Raj',
-    src: '/beats/Gumshuda-Param-Doleshwar-Raj.mp3',
+    beforeSrc: 'PREMIUM_PROD_BEFORE',
+    afterSrc: 'PREMIUM_PROD_AFTER',
   },
 };
 
@@ -739,8 +734,9 @@ function DubaiLandingPageInner() {
   const PRODUCTION_SOUND_DESIGN = getProductionSoundDesign(lang);
   const ADDONS = getAddons(lang);
 
-  // Compute translated beats data
-  const BEATS_DATA = getBeatsData(lang);
+  // Compute translated beats data (memoized to prevent unnecessary re-renders)
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  const BEATS_DATA = React.useMemo(() => getBeatsData(lang), [lang]);
 
   /* ── Sticky mobile CTA: appears after scrolling past hero ── */
   const [showStickyCta, setShowStickyCta] = useState(false);
@@ -895,7 +891,7 @@ function DubaiLandingPageInner() {
 
             <HeroWaveform />
 
-            <p style={{
+            <p className={isArabic ? '' : 'font-body'} style={{
               color: 'var(--mute)',
               fontSize: 15,
               lineHeight: 1.7,
@@ -1014,7 +1010,7 @@ function DubaiLandingPageInner() {
                 {pick(portT.heading, lang)}
               </h2>
             </div>
-            <p style={{ color: 'var(--mute)', fontSize: 14, lineHeight: 1.6, maxWidth: 620, margin: 0, fontFamily: arFont }}>
+            <p className={isArabic ? '' : 'font-body'} style={{ color: 'var(--mute)', fontSize: 14, lineHeight: 1.6, maxWidth: 620, margin: 0, fontFamily: arFont }}>
               {pick(beatsT.sectionSub, lang)}
             </p>
           </div>
@@ -1344,7 +1340,7 @@ function DubaiLandingPageInner() {
           }}>
             {pick(svcT.heading, lang)}
           </h2>
-          <p style={{
+          <p className={isArabic ? '' : 'font-body'} style={{
             color: 'var(--mute)',
             fontSize: 16,
             lineHeight: 1.7,
@@ -1655,7 +1651,7 @@ function DubaiLandingPageInner() {
           }}>
             {pick(testT.heading, lang)}
           </h2>
-          <p style={{
+          <p className={isArabic ? '' : 'font-body'} style={{
             color: 'var(--mute)',
             fontSize: 16,
             lineHeight: 1.7,
@@ -1832,7 +1828,7 @@ function DubaiLandingPageInner() {
           }}>
             {pick(aboutT.heading, lang)}
           </h2>
-          <p style={{
+          <p className={isArabic ? '' : 'font-body'} style={{
             color: 'var(--mute)',
             fontSize: 16,
             lineHeight: 1.8,
@@ -2034,7 +2030,7 @@ function DubaiLandingPageInner() {
                 <p className={isArabic ? '' : 'font-playfair'} style={{ color: 'var(--bone)', fontSize: 20, fontWeight: 400, marginBottom: 12, fontFamily: arFont }}>
                   {pick(brand.name, lang)}
                 </p>
-                <p style={{ color: 'var(--mute)', fontSize: 13, lineHeight: 1.7, fontFamily: arFont }}>
+                <p className={isArabic ? '' : 'font-body'} style={{ color: 'var(--mute)', fontSize: 13, lineHeight: 1.7, fontFamily: arFont }}>
                   {pick(footerT.tagline, lang)}
                 </p>
                 <div className="flex items-center gap-2" style={{ marginTop: 16, flexDirection: isArabic ? 'row-reverse' : 'row' }}>
@@ -2268,7 +2264,7 @@ function DubaiLandingPageInner() {
       )}
 
       {/* ── Sticky mobile CTA bar — slides up after scrolling past hero ── */}
-      <div className={`mobile-sticky-cta ${showStickyCta ? 'mobile-sticky-cta-visible' : ''}`} style={floatingPlayer ? { bottom: 68 } : undefined}>
+      <div className={`mobile-sticky-cta ${showStickyCta ? 'mobile-sticky-cta-visible' : ''}`} style={floatingPlayer ? { bottom: 58 } : undefined}>
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '10px 16px' }}>
           <span className="mobile-sticky-cta-text" style={{ color: 'var(--mute)', fontSize: 11, fontWeight: 400, fontFamily: arFont }}>
             {pick(mobileCta.limitedSlots, lang)}

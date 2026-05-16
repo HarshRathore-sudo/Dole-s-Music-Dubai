@@ -2,6 +2,7 @@
 
 import React, { useRef, useState, useEffect, useCallback } from 'react';
 import { globalAudioManager } from './globalAudioManager';
+import { resolveHlsUrl, attachHls } from './hlsLoader';
 
 /* ══════════════════════════════════════════════════════════════
    Card Before/After Player — Synchronized dual-track A/B player
@@ -82,7 +83,7 @@ export default function CardBeforeAfterPlayer({
   /* ── Shared refs ── */
   const audioCtxRef = useRef<AudioContext | null>(null);
   const progressRef = useRef<HTMLDivElement>(null);
-  const blobCacheRef = useRef<Map<string, string>>(new Map());
+  // blobCacheRef removed — now using HLS streaming
   const syncIntervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
   /* ── State ── */
@@ -153,18 +154,10 @@ export default function CardBeforeAfterPlayer({
     }
   }, [isDualTrack, applyDualMode, applySingleMode]);
 
-  /* ── Fetch audio as blob URL (anti-piracy) ── */
-  const fetchBlobUrl = useCallback(async (src: string): Promise<string> => {
-    const cached = blobCacheRef.current.get(src);
-    if (cached) return cached;
-
-    const resp = await fetch(src);
-    if (!resp.ok) throw new Error(`Failed to load audio: ${resp.status}`);
-    const blob = await resp.blob();
-    const url = URL.createObjectURL(blob);
-    blobCacheRef.current.set(src, url);
-    return url;
-  }, []);
+  /* ── HLS cleanup refs ── */
+  const hlsCleanupBeforeRef = useRef<(() => void) | null>(null);
+  const hlsCleanupAfterRef = useRef<(() => void) | null>(null);
+  const hlsCleanupSingleRef = useRef<(() => void) | null>(null);
 
   /* ── Get or create AudioContext ── */
   const getAudioCtx = useCallback((): AudioContext => {
@@ -219,10 +212,8 @@ export default function CardBeforeAfterPlayer({
     setIsPlaying(false);
 
     try {
-      const [beforeUrl, afterUrl] = await Promise.all([
-        fetchBlobUrl(sample.beforeSrc),
-        fetchBlobUrl(sample.afterSrc),
-      ]);
+      const beforeHlsUrl = resolveHlsUrl(sample.beforeSrc);
+      const afterHlsUrl = resolveHlsUrl(sample.afterSrc);
 
       /* If already set up, just resume */
       if (beforeAudioRef.current && afterAudioRef.current && ready) {
@@ -312,8 +303,7 @@ export default function CardBeforeAfterPlayer({
         }
       };
 
-      beforeAudio.addEventListener('canplay', onBothReady, { once: true });
-      afterAudio.addEventListener('canplay', onBothReady, { once: true });
+      /* HLS onReady callbacks trigger onBothReady — no need for canplay listeners */
 
       /* Track time from after audio (the "mastered" reference) */
       afterAudio.addEventListener('loadedmetadata', () => {
@@ -372,16 +362,27 @@ export default function CardBeforeAfterPlayer({
         setLoading(false);
       });
 
-      /* Assign sources and store refs */
-      beforeAudio.src = beforeUrl;
-      afterAudio.src = afterUrl;
+      /* Assign HLS sources and store refs */
       beforeAudioRef.current = beforeAudio;
       afterAudioRef.current = afterAudio;
+
+      // Cleanup previous HLS instances
+      if (hlsCleanupBeforeRef.current) hlsCleanupBeforeRef.current();
+      if (hlsCleanupAfterRef.current) hlsCleanupAfterRef.current();
+
+      hlsCleanupBeforeRef.current = attachHls(beforeAudio, beforeHlsUrl, {
+        onReady: onBothReady,
+        onError: (e) => { console.error('Before HLS error:', e); setLoading(false); },
+      });
+      hlsCleanupAfterRef.current = attachHls(afterAudio, afterHlsUrl, {
+        onReady: onBothReady,
+        onError: (e) => { console.error('After HLS error:', e); setLoading(false); },
+      });
     } catch (err) {
       console.error('Failed to load dual-track audio:', err);
       setLoading(false);
     }
-  }, [sample.beforeSrc, sample.afterSrc, ready, applyDualMode, fetchBlobUrl, getAudioCtx, startSyncLoop, stopSyncLoop]);
+  }, [sample.beforeSrc, sample.afterSrc, ready, applyDualMode, getAudioCtx, startSyncLoop, stopSyncLoop]);
 
   /* ══════════════════════════════════════════════════════════
      SINGLE-TRACK: Setup (original Web Audio filter approach)
@@ -393,7 +394,7 @@ export default function CardBeforeAfterPlayer({
     setIsPlaying(false);
 
     try {
-      const blobUrl = await fetchBlobUrl(sample.src);
+      const hlsUrl = resolveHlsUrl(sample.src);
 
       /* If already set up, just play */
       if (singleAudioRef.current && ready) {
@@ -500,13 +501,19 @@ export default function CardBeforeAfterPlayer({
         setLoading(false);
       });
 
-      audio.src = blobUrl;
       singleAudioRef.current = audio;
+
+      // Cleanup previous HLS instance
+      if (hlsCleanupSingleRef.current) hlsCleanupSingleRef.current();
+
+      hlsCleanupSingleRef.current = attachHls(audio, hlsUrl, {
+        onError: (e) => { console.error('Single-track HLS error:', e); setLoading(false); },
+      });
     } catch (err) {
       console.error('Failed to load audio:', err);
       setLoading(false);
     }
-  }, [sample.src, ready, applySingleMode, fetchBlobUrl, getAudioCtx]);
+  }, [sample.src, ready, applySingleMode, getAudioCtx]);
 
   /* ── Unified load & play ── */
   /* ── Stop this player's audio (used by global manager) ── */
@@ -562,8 +569,13 @@ export default function CardBeforeAfterPlayer({
       highPassRef.current = null;
       singleGainRef.current = null;
 
-      blobCacheRef.current.forEach(url => URL.revokeObjectURL(url));
-      blobCacheRef.current.clear();
+      // Cleanup HLS instances
+      if (hlsCleanupBeforeRef.current) hlsCleanupBeforeRef.current();
+      if (hlsCleanupAfterRef.current) hlsCleanupAfterRef.current();
+      if (hlsCleanupSingleRef.current) hlsCleanupSingleRef.current();
+      hlsCleanupBeforeRef.current = null;
+      hlsCleanupAfterRef.current = null;
+      hlsCleanupSingleRef.current = null;
       setReady(false);
     };
   // eslint-disable-next-line react-hooks/exhaustive-deps

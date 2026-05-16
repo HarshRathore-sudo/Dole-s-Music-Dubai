@@ -2,14 +2,15 @@
 
 import React, { useRef, useState, useEffect, useCallback } from 'react';
 import { globalAudioManager } from './globalAudioManager';
+import { resolveHlsUrl, attachHls, preloadManifest } from './hlsLoader';
 
 /* ══════════════════════════════════════════════════════════════
-   Secure Beats Player — Web Audio API based
-   - Audio loaded via fetch → Blob URL (no direct src in DOM)
+   Secure Beats Player — HLS streaming via CloudFront CDN
+   - Audio streamed via HLS (adaptive bitrate)
    - Custom player UI (no native browser controls)
    - Right-click prevention on player area
-   - Blob URLs revoked on cleanup
    - No download button or context menu
+   - Anti-piracy: segments only, no full file exposure
    ══════════════════════════════════════════════════════════════ */
 
 export interface Beat {
@@ -91,10 +92,9 @@ export default function SecureBeatsPlayer({
   const arFont = isArabic ? "'Noto Sans Arabic', 'Segoe UI', Tahoma, sans-serif" : undefined;
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const progressRef = useRef<HTMLDivElement>(null);
-  const blobUrlRef = useRef<string | null>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const loadIdRef = useRef(0); // guard against stale async completions
-  const blobCacheRef = useRef<Map<string, string>>(new Map()); // cache blob URLs per beat src
+  const hlsCleanupRef = useRef<(() => void) | null>(null); // HLS instance cleanup
 
   const [activeIdx, setActiveIdx] = useState<number>(-1);
   const [isPlaying, setIsPlaying] = useState(false);
@@ -124,17 +124,21 @@ export default function SecureBeatsPlayer({
     return beats.filter(b => b.genre === activeGenre);
   }, [beats, activeGenreIdx, activeGenre]);
 
-  /* ── Destroy current audio element & revoke its blob URL ── */
+  /* ── Destroy current audio element & HLS instance ── */
   const destroyAudio = useCallback(() => {
+    if (hlsCleanupRef.current) {
+      hlsCleanupRef.current();
+      hlsCleanupRef.current = null;
+    }
     if (audioRef.current) {
       audioRef.current.pause();
       audioRef.current.removeAttribute('src');
-      audioRef.current.load(); // resets the element fully
+      audioRef.current.load();
       audioRef.current = null;
     }
   }, []);
 
-  /* ── Load & play a beat securely via fetch → blob ── */
+  /* ── Load & play a beat via HLS streaming ── */
   const playBeat = useCallback(async (idx: number) => {
     if (idx < 0 || idx >= beats.length) return;
 
@@ -161,26 +165,11 @@ export default function SecureBeatsPlayer({
     destroyAudio();
 
     try {
-      // Check blob cache first — avoids re-fetching already loaded beats
-      let blobUrl = blobCacheRef.current.get(beats[idx].src);
-
-      if (!blobUrl) {
-        // Fetch audio as blob (URL not visible in DOM)
-        const resp = await fetch(beats[idx].src);
-        if (!resp.ok) throw new Error('Failed to load');
-
-        // Bail if a newer load was triggered while we were fetching
-        if (thisLoadId !== loadIdRef.current) return;
-
-        const blob = await resp.blob();
-        blobUrl = URL.createObjectURL(blob);
-        blobCacheRef.current.set(beats[idx].src, blobUrl);
-      }
+      // Resolve the HLS URL from the beat src key
+      const hlsUrl = resolveHlsUrl(beats[idx].src);
 
       // Double-check we're still the active load
       if (thisLoadId !== loadIdRef.current) return;
-
-      blobUrlRef.current = blobUrl;
 
       // Create fresh audio element (never attached to DOM)
       const audio = new Audio();
@@ -206,8 +195,7 @@ export default function SecureBeatsPlayer({
         }).catch(() => {});
       };
 
-      // Listen to THREE readiness events — different browsers / blob-URL states
-      // fire different ones. All are guarded by `resolved` so only the first wins.
+      // Listen to readiness events
       audio.addEventListener('canplay', startPlayback, { once: true });
       audio.addEventListener('canplaythrough', startPlayback, { once: true });
       audio.addEventListener('loadeddata', startPlayback, { once: true });
@@ -264,16 +252,29 @@ export default function SecureBeatsPlayer({
         setLoading(false);
       });
 
-      // Set src AFTER all listeners are attached
-      audio.src = blobUrl;
+      // Attach HLS source (handles both native Safari HLS and hls.js fallback)
+      const cleanup = attachHls(audio, hlsUrl, {
+        onReady: startPlayback,
+        onError: () => {
+          if (thisLoadId === loadIdRef.current) {
+            resolved = true;
+            setLoading(false);
+          }
+        },
+        onDuration: (dur) => {
+          if (thisLoadId === loadIdRef.current) setDuration(dur);
+        },
+      });
+
+      hlsCleanupRef.current = cleanup;
       audioRef.current = audio;
 
-      // Safety net — if NO readiness event fires within 3s, force-start playback
+      // Safety net — if NO readiness event fires within 5s, force-start playback
       setTimeout(() => {
         if (!resolved && thisLoadId === loadIdRef.current && audioRef.current) {
           startPlayback();
         }
-      }, 3000);
+      }, 5000);
     } catch {
       if (thisLoadId === loadIdRef.current) {
         setLoading(false);
@@ -282,17 +283,10 @@ export default function SecureBeatsPlayer({
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [beats, volume, muted, destroyAudio]);
 
-  /* ── Preload first beat's blob on mount (makes first click instant) ── */
+  /* ── Preload first beat's HLS manifest on mount (warms CDN/DNS) ── */
   useEffect(() => {
-    if (beats.length > 0 && !blobCacheRef.current.has(beats[0].src)) {
-      fetch(beats[0].src)
-        .then(r => r.ok ? r.blob() : null)
-        .then(blob => {
-          if (blob && !blobCacheRef.current.has(beats[0].src)) {
-            blobCacheRef.current.set(beats[0].src, URL.createObjectURL(blob));
-          }
-        })
-        .catch(() => {});
+    if (beats.length > 0) {
+      preloadManifest(resolveHlsUrl(beats[0].src));
     }
   }, [beats]);
 
@@ -303,9 +297,6 @@ export default function SecureBeatsPlayer({
       destroyAudio();
       globalAudioManager.release('beats-player');
       globalAudioManager.clearFloatingState('beats-player');
-      // Revoke ALL cached blob URLs
-      blobCacheRef.current.forEach(url => URL.revokeObjectURL(url));
-      blobCacheRef.current.clear();
     };
   }, [destroyAudio]);
 
@@ -676,7 +667,7 @@ export default function SecureBeatsPlayer({
               <div style={{ flex: 1, minWidth: 0 }}>
                 <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 8, flexDirection: isArabic ? 'row-reverse' : 'row' }}>
                   <div style={{ minWidth: 0 }}>
-                    <p style={{ color: 'var(--bone)', fontSize: 14, fontWeight: 500, margin: 0, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', fontFamily: arFont, textAlign: isArabic ? 'right' : 'left' }}>
+                    <p className={isArabic ? '' : 'font-body'} style={{ color: 'var(--bone)', fontSize: 14, fontWeight: 500, margin: 0, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', fontFamily: arFont, textAlign: isArabic ? 'right' : 'left' }}>
                       {beats[activeIdx]?.title}
                     </p>
                     <p style={{ color: 'var(--mute)', fontSize: 11, margin: 0, fontFamily: arFont, textAlign: isArabic ? 'right' : 'left' }}>
@@ -879,7 +870,7 @@ export default function SecureBeatsPlayer({
 
                     {/* Track info */}
                     <div style={{ flex: 1, minWidth: 0, textAlign: isArabic ? 'right' : 'left' }}>
-                      <p style={{
+                      <p className={isArabic ? '' : 'font-body'} style={{
                         color: isActive ? 'var(--brass)' : 'var(--bone)',
                         fontSize: 14,
                         fontWeight: isActive ? 500 : 400,

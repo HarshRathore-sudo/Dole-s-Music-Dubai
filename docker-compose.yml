@@ -2,5 +2,5 @@ services:
   dubai:
     build: .
     ports:
-      - "12058:80"
+      - "44725:80"
     restart: unless-stopped
