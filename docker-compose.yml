@@ -1,0 +1,6 @@
+services:
+  dubai:
+    build: .
+    ports:
+      - "12058:80"
+    restart: unless-stopped

@@ -1,0 +1,5 @@
+@import "tailwindcss";
+
+.font-playfair {
+  font-family: var(--font-playfair), serif;
+}

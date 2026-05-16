@@ -1,0 +1,1 @@
+self.__NEXT_FONT_MANIFEST='{"pages":{},"app":{"/opt/claude-code-api/projects/default/doles-music-web/de0aea32-9856-43d2-b90d-e5f32b8b0c32/dubai-standalone/app/layout":["static/media/eaead17c7dbfcd5d-s.p.woff2"]},"appUsingSizeAdjust":true,"pagesUsingSizeAdjust":false}';
