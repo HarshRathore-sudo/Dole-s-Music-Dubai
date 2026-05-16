@@ -1,0 +1,41 @@
+services:
+  app:
+    container_name: cc-prod-8b133ffe-app
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    expose:
+      - "80"
+    environment:
+      - NODE_ENV=production
+    healthcheck:
+      test: ["CMD-SHELL", "wget --no-verbose --tries=1 -O /dev/null http://127.0.0.1:80/ || exit 1"]
+      interval: 15s
+      timeout: 5s
+      retries: 5
+      start_period: 60s
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
+    labels:
+      - "traefik.enable=true"
+      # HTTP router — NO redirect middleware (system nginx handles SSL termination)
+      - "traefik.http.routers.dubai-dolesmusic-com-app-http.rule=Host(`dubai.dolesmusic.com`)"
+      - "traefik.http.routers.dubai-dolesmusic-com-app-http.entrypoints=web"
+      # HTTPS router (for direct Traefik access)
+      - "traefik.http.routers.dubai-dolesmusic-com-app.rule=Host(`dubai.dolesmusic.com`)"
+      - "traefik.http.routers.dubai-dolesmusic-com-app.entrypoints=websecure"
+      - "traefik.http.routers.dubai-dolesmusic-com-app.tls=true"
+      - "traefik.http.routers.dubai-dolesmusic-com-app.tls.certresolver=myresolver"
+      # Service port + network binding
+      - "traefik.http.services.dubai-dolesmusic-com-app.loadbalancer.server.port=80"
+      - "traefik.docker.network=traefik-public"
+    networks:
+      - traefik-public
+
+networks:
+  traefik-public:
+    external: true

@@ -1,4 +1,4 @@
-// File: /opt/claude-code-api/projects/default/doles-music-web/de0aea32-9856-43d2-b90d-e5f32b8b0c32/dubai-standalone/app/page.tsx
+// File: /opt/claude-code-api/projects/default/Dole-s-Music-Dubai/8b133ffe-a3e9-4e73-96db-7b9f8b6bd9ac/app/page.tsx
 import * as entry from '../../../app/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

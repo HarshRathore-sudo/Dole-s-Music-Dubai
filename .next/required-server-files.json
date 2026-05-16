@@ -102,7 +102,7 @@
         "transform": "lodash/{{member}}"
       }
     },
-    "outputFileTracingRoot": "/opt/claude-code-api/projects/default/doles-music-web/de0aea32-9856-43d2-b90d-e5f32b8b0c32/dubai-standalone",
+    "outputFileTracingRoot": "/opt/claude-code-api/projects/default/Dole-s-Music-Dubai/8b133ffe-a3e9-4e73-96db-7b9f8b6bd9ac",
     "experimental": {
       "nodeMiddleware": false,
       "cacheLife": {
@@ -285,10 +285,10 @@
     "bundlePagesRouterDependencies": false,
     "configFileName": "next.config.ts",
     "turbopack": {
-      "root": "/opt/claude-code-api/projects/default/doles-music-web/de0aea32-9856-43d2-b90d-e5f32b8b0c32/dubai-standalone"
+      "root": "/opt/claude-code-api/projects/default/Dole-s-Music-Dubai/8b133ffe-a3e9-4e73-96db-7b9f8b6bd9ac"
     }
   },
-  "appDir": "/opt/claude-code-api/projects/default/doles-music-web/de0aea32-9856-43d2-b90d-e5f32b8b0c32/dubai-standalone",
+  "appDir": "/opt/claude-code-api/projects/default/Dole-s-Music-Dubai/8b133ffe-a3e9-4e73-96db-7b9f8b6bd9ac",
   "relativeAppDir": "",
   "files": [
     ".next/routes-manifest.json",

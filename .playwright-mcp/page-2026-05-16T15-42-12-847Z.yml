@@ -1,0 +1,903 @@
+- generic [ref=e2]:
+  - link "Skip to main content" [ref=e3] [cursor=pointer]:
+    - /url: "#main-content"
+  - navigation "Main navigation" [ref=e4]:
+    - generic [ref=e5]:
+      - link "Dole's Music" [ref=e6] [cursor=pointer]:
+        - /url: /
+        - img [ref=e7]
+        - generic [ref=e12]: Dole's Music
+      - generic [ref=e13]:
+        - link "Services" [ref=e14] [cursor=pointer]:
+          - /url: "#services"
+        - link "Portfolio" [ref=e15] [cursor=pointer]:
+          - /url: "#portfolio"
+        - link "About" [ref=e16] [cursor=pointer]:
+          - /url: "#about"
+      - generic [ref=e17]:
+        - group "Language" [ref=e18]:
+          - button "EN" [pressed] [ref=e19]
+          - generic [ref=e20]: ·
+          - button "عر" [ref=e21] [cursor=pointer]
+        - link "Book a Session" [ref=e22] [cursor=pointer]:
+          - /url: "#services"
+  - main [ref=e24]:
+    - generic [ref=e25]:
+      - img [ref=e27]
+      - img
+      - generic [ref=e28]:
+        - paragraph [ref=e29]: PREMIUM AUDIO SERVICES
+        - heading "World-Class Audio Production Now Serving Dubai Virtually" [level=1] [ref=e30]:
+          - generic [ref=e31]: World-Class
+          - generic [ref=e32]: Audio Production
+          - generic [ref=e33]: Now Serving Dubai Virtually
+        - img [ref=e34]
+        - paragraph [ref=e36]: Premium mixing, mastering, and sound design delivered remotely to Dubai’s artists, brands, and storytellers — studio-quality results, anywhere you are.
+        - generic [ref=e37]:
+          - link "Book a Free Consultation" [ref=e38] [cursor=pointer]:
+            - /url: "#services"
+          - link "Listen to Our Work" [ref=e39] [cursor=pointer]:
+            - /url: "#beats"
+            - img [ref=e40]
+            - text: Listen to Our Work
+    - generic [ref=e42]:
+      - generic [ref=e43]:
+        - heading "Beats Library & Visualizing Sound" [level=2] [ref=e53]
+        - paragraph [ref=e54]: Preview our signature sound — crafted for artists who demand excellence.
+      - generic [ref=e55]:
+        - generic [ref=e57]:
+          - generic [ref=e58]:
+            - button "All 17" [ref=e59] [cursor=pointer]:
+              - text: All
+              - generic [ref=e60]: "17"
+            - button "Afro / House 2" [ref=e61] [cursor=pointer]:
+              - text: Afro / House
+              - generic [ref=e62]: "2"
+            - button "Arabic Trap 2" [ref=e63] [cursor=pointer]:
+              - text: Arabic Trap
+              - generic [ref=e64]: "2"
+            - button "Drill 3" [ref=e65] [cursor=pointer]:
+              - text: Drill
+              - generic [ref=e66]: "3"
+            - button "Hip-Hop 9" [ref=e67] [cursor=pointer]:
+              - text: Hip-Hop
+              - generic [ref=e68]: "9"
+            - button "Punjabi Trap 1" [ref=e69] [cursor=pointer]:
+              - text: Punjabi Trap
+              - generic [ref=e70]: "1"
+          - generic [ref=e72]:
+            - generic [ref=e73]:
+              - generic [ref=e75]: Afro / House
+              - generic [ref=e76]: (2)
+            - generic [ref=e77] [cursor=pointer]:
+              - generic [ref=e79]: "1"
+              - generic [ref=e80]:
+                - paragraph [ref=e81]: Afro House Beat
+                - paragraph [ref=e82]: Dole’s Music
+              - generic [ref=e83]: Afro / House
+              - img [ref=e85]
+            - generic [ref=e87] [cursor=pointer]:
+              - generic [ref=e89]: "2"
+              - generic [ref=e90]:
+                - paragraph [ref=e91]: Dancefloor (118 BPM)
+                - paragraph [ref=e92]: Dole’s Music
+              - generic [ref=e93]: Afro / House
+              - img [ref=e95]
+            - generic [ref=e97]:
+              - generic [ref=e99]: Arabic Trap
+              - generic [ref=e100]: (2)
+            - generic [ref=e101] [cursor=pointer]:
+              - generic [ref=e103]: "3"
+              - generic [ref=e104]:
+                - paragraph [ref=e105]: Arabic Trap Beat
+                - paragraph [ref=e106]: Dole’s Music
+              - generic [ref=e107]: Arabic Trap
+              - img [ref=e109]
+            - generic [ref=e111] [cursor=pointer]:
+              - generic [ref=e113]: "4"
+              - generic [ref=e114]:
+                - paragraph [ref=e115]: Arabic Trap Beat (100 BPM)
+                - paragraph [ref=e116]: Dole’s Music
+              - generic [ref=e117]: Arabic Trap
+              - img [ref=e119]
+            - generic [ref=e121]:
+              - generic [ref=e123]: Drill
+              - generic [ref=e124]: (3)
+            - generic [ref=e125] [cursor=pointer]:
+              - generic [ref=e127]: "5"
+              - generic [ref=e128]:
+                - paragraph [ref=e129]: Dark Jersey Drill Beat
+                - paragraph [ref=e130]: Dole’s Music
+              - generic [ref=e131]: Drill
+              - img [ref=e133]
+            - generic [ref=e135] [cursor=pointer]:
+              - generic [ref=e137]: "6"
+              - generic [ref=e138]:
+                - paragraph [ref=e139]: Indian Drill Beat
+                - paragraph [ref=e140]: Dole’s Music
+              - generic [ref=e141]: Drill
+              - img [ref=e143]
+            - generic [ref=e145] [cursor=pointer]:
+              - generic [ref=e147]: "7"
+              - generic [ref=e148]:
+                - paragraph [ref=e149]: Indian Drill Beat III
+                - paragraph [ref=e150]: Dole’s Music
+              - generic [ref=e151]: Drill
+              - img [ref=e153]
+            - generic [ref=e155]:
+              - generic [ref=e157]: Hip-Hop
+              - generic [ref=e158]: (9)
+            - generic [ref=e159] [cursor=pointer]:
+              - generic [ref=e161]: "8"
+              - generic [ref=e162]:
+                - paragraph [ref=e163]: Khaas Freestyle Type Beat (98 BPM)
+                - paragraph [ref=e164]: Dole’s Music
+              - generic [ref=e165]: Hip-Hop
+              - img [ref=e167]
+            - generic [ref=e169] [cursor=pointer]:
+              - generic [ref=e171]: "9"
+              - generic [ref=e172]:
+                - paragraph [ref=e173]: Scott Storch Type Beat
+                - paragraph [ref=e174]: Dole’s Music
+              - generic [ref=e175]: Hip-Hop
+              - img [ref=e177]
+            - generic [ref=e179] [cursor=pointer]:
+              - generic [ref=e181]: "10"
+              - generic [ref=e182]:
+                - paragraph [ref=e183]: Mama Beats 23
+                - paragraph [ref=e184]: Dole’s Music
+              - generic [ref=e185]: Hip-Hop
+              - img [ref=e187]
+            - generic [ref=e189] [cursor=pointer]:
+              - generic [ref=e191]: "11"
+              - generic [ref=e192]:
+                - paragraph [ref=e193]: Mama Beats 24
+                - paragraph [ref=e194]: Dole’s Music
+              - generic [ref=e195]: Hip-Hop
+              - img [ref=e197]
+            - generic [ref=e199] [cursor=pointer]:
+              - generic [ref=e201]: "12"
+              - generic [ref=e202]:
+                - paragraph [ref=e203]: Mama Beats 46
+                - paragraph [ref=e204]: Dole’s Music
+              - generic [ref=e205]: Hip-Hop
+              - img [ref=e207]
+            - generic [ref=e209] [cursor=pointer]:
+              - generic [ref=e211]: "13"
+              - generic [ref=e212]:
+                - paragraph [ref=e213]: Mama Beats 48
+                - paragraph [ref=e214]: Dole’s Music
+              - generic [ref=e215]: Hip-Hop
+              - img [ref=e217]
+            - generic [ref=e219] [cursor=pointer]:
+              - generic [ref=e221]: "14"
+              - generic [ref=e222]:
+                - paragraph [ref=e223]: Mama Beats 49
+                - paragraph [ref=e224]: Dole’s Music
+              - generic [ref=e225]: Hip-Hop
+              - img [ref=e227]
+            - generic [ref=e229] [cursor=pointer]:
+              - generic [ref=e231]: "15"
+              - generic [ref=e232]:
+                - paragraph [ref=e233]: Mama Beats 51
+                - paragraph [ref=e234]: Dole’s Music
+              - generic [ref=e235]: Hip-Hop
+              - img [ref=e237]
+            - generic [ref=e239] [cursor=pointer]:
+              - generic [ref=e241]: "16"
+              - generic [ref=e242]:
+                - paragraph [ref=e243]: Mama Beats 70
+                - paragraph [ref=e244]: Dole’s Music
+              - generic [ref=e245]: Hip-Hop
+              - img [ref=e247]
+            - generic [ref=e249]:
+              - generic [ref=e251]: Punjabi Trap
+              - generic [ref=e252]: (1)
+            - generic [ref=e253] [cursor=pointer]:
+              - generic [ref=e255]: "17"
+              - generic [ref=e256]:
+                - paragraph [ref=e257]: Punjabi Trap Beat
+                - paragraph [ref=e258]: Dole’s Music
+              - generic [ref=e259]: Punjabi Trap
+              - img [ref=e261]
+        - generic [ref=e263]:
+          - generic [ref=e264]:
+            - img [ref=e265]
+            - heading "Visualizing Sound" [level=3] [ref=e267]
+            - generic [ref=e268]: — Films, singles & brand sonic identities
+          - generic [ref=e270]:
+            - generic [ref=e271] [cursor=pointer]:
+              - generic [ref=e272]:
+                - img "Jaadu – Do Patti" [ref=e273]
+                - img [ref=e276]
+              - generic [ref=e278]:
+                - paragraph [ref=e279]: Jaadu – Do Patti
+                - generic [ref=e280]:
+                  - paragraph [ref=e281]: Sachet–Parampara
+                  - generic [ref=e282]: Film
+            - generic [ref=e283] [cursor=pointer]:
+              - generic [ref=e284]:
+                - img "Paisa Hai Toh – Farzi" [ref=e285]
+                - img [ref=e288]
+              - generic [ref=e290]:
+                - paragraph [ref=e291]: Paisa Hai Toh – Farzi
+                - generic [ref=e292]:
+                  - paragraph [ref=e293]: Sachin-Jigar, Vishal Dadlani
+                  - generic [ref=e294]: Film
+            - generic [ref=e295] [cursor=pointer]:
+              - generic [ref=e296]:
+                - img "Jumehraat" [ref=e297]
+                - img [ref=e300]
+              - generic [ref=e302]:
+                - paragraph [ref=e303]: Jumehraat
+                - generic [ref=e304]:
+                  - paragraph [ref=e305]: Hitzone · Prod by Jason
+                  - generic [ref=e306]: Single
+            - generic [ref=e307] [cursor=pointer]:
+              - generic [ref=e308]:
+                - img "Sitare" [ref=e309]
+                - img [ref=e312]
+              - generic [ref=e314]:
+                - paragraph [ref=e315]: Sitare
+                - generic [ref=e316]:
+                  - paragraph [ref=e317]: Shaggy · OG
+                  - generic [ref=e318]: Single
+            - generic [ref=e319] [cursor=pointer]:
+              - generic [ref=e320]:
+                - img "Grey Games" [ref=e321]
+                - img [ref=e324]
+              - generic [ref=e326]:
+                - paragraph [ref=e327]: Grey Games
+                - generic [ref=e328]:
+                  - paragraph [ref=e329]: Kannada – Screen BGM
+                  - generic [ref=e330]: BGM
+            - generic [ref=e331] [cursor=pointer]:
+              - generic [ref=e332]:
+                - img "Wrestling Extreme Mania" [ref=e333]
+                - img [ref=e336]
+              - generic [ref=e338]:
+                - paragraph [ref=e339]: Wrestling Extreme Mania
+                - generic [ref=e340]:
+                  - paragraph [ref=e341]: Brand sonic identity
+                  - generic [ref=e342]: Brand
+            - generic [ref=e343] [cursor=pointer]:
+              - generic [ref=e344]:
+                - img "Saanp Seedhi" [ref=e345]
+                - img [ref=e348]
+              - generic [ref=e350]:
+                - paragraph [ref=e351]: Saanp Seedhi
+                - generic [ref=e352]:
+                  - paragraph [ref=e353]: Thoratt
+                  - generic [ref=e354]: Single
+            - generic [ref=e355] [cursor=pointer]:
+              - generic [ref=e356]:
+                - img "Seedha Parcel" [ref=e357]
+                - img [ref=e360]
+              - generic [ref=e362]:
+                - paragraph [ref=e363]: Seedha Parcel
+                - generic [ref=e364]:
+                  - paragraph [ref=e365]: Hitzone · Prod by Jason
+                  - generic [ref=e366]: Single
+            - generic [ref=e367] [cursor=pointer]:
+              - generic [ref=e368]:
+                - img "Together" [ref=e369]
+                - img [ref=e372]
+              - generic [ref=e374]:
+                - paragraph [ref=e375]: Together
+                - generic [ref=e376]:
+                  - paragraph [ref=e377]: Hitzone x Bella · Prod by Jason
+                  - generic [ref=e378]: Single
+            - generic [ref=e379] [cursor=pointer]:
+              - generic [ref=e380]:
+                - img "Homie Log" [ref=e381]
+                - img [ref=e384]
+              - generic [ref=e386]:
+                - paragraph [ref=e387]: Homie Log
+                - generic [ref=e388]:
+                  - paragraph [ref=e389]: Thoratt · Prod by Flamboy
+                  - generic [ref=e390]: Single
+      - link "Book a Session" [ref=e392] [cursor=pointer]:
+        - /url: https://tealfeed.com/doles_music/connect/call?callType=69f0b4eb03abf7c5fa258689
+    - generic [ref=e393]:
+      - img
+      - paragraph [ref=e394]: SERVICES & PRICING
+      - heading "The Sonic Experience" [level=2] [ref=e395]
+      - paragraph [ref=e396]: Transparent pricing. Premium results. Every package engineered for excellence.
+      - generic [ref=e397]:
+        - generic [ref=e408]:
+          - heading "Mixing & Mastering" [level=3] [ref=e409]
+          - paragraph [ref=e410]: Dynamic Equalizer Layout
+        - generic [ref=e411]:
+          - generic [ref=e412]:
+            - generic [ref=e414]:
+              - heading "The “Hands-Free” Mix" [level=4] [ref=e415]
+              - paragraph [ref=e417]: 800 AED
+              - paragraph [ref=e418]: Trust the expert’s ear. You drop the stems, we drop the perfect mix.
+              - list [ref=e419]:
+                - listitem [ref=e420]: Track up to 3:30 min
+                - listitem [ref=e422]: Up to 25 Stems
+                - listitem [ref=e424]: 5-Day Delivery
+                - listitem [ref=e426]: AutoTune / WavesTune Only
+                - listitem [ref=e428]: 1 Revision
+                - listitem [ref=e430]: 1 Master
+              - link "Get Started" [ref=e432] [cursor=pointer]:
+                - /url: https://tealfeed.com/doles_music/connect/call?callType=69f0b4eb03abf7c5fa258689
+              - generic [ref=e434]:
+                - generic [ref=e435]:
+                  - img [ref=e436]
+                  - generic [ref=e440]: Vocal Production — Dole's Music
+                - generic [ref=e441]:
+                  - generic [ref=e442]:
+                    - button "Before" [ref=e443] [cursor=pointer]
+                    - button "After" [ref=e445] [cursor=pointer]
+                  - generic [ref=e446]: Mastered
+                - button "Play" [ref=e448] [cursor=pointer]:
+                  - img [ref=e449]
+                - generic [ref=e453]:
+                  - img [ref=e454]
+                  - generic [ref=e457]: Streaming Only
+            - generic [ref=e459]:
+              - generic [ref=e461]:
+                - heading "The “Hands-Free” Mix" [level=4] [ref=e462]
+                - paragraph [ref=e464]: 800 AED
+                - paragraph [ref=e465]: Trust the expert’s ear. You drop the stems, we drop the perfect mix.
+                - paragraph [ref=e466]: 6 features included
+                - generic [ref=e467]:
+                  - text: Tap for details
+                  - img [ref=e468]
+              - generic [ref=e471]:
+                - heading "The “Hands-Free” Mix — 800 AED" [level=4] [ref=e472]
+                - list [ref=e474]:
+                  - listitem [ref=e475]: Track up to 3:30 min
+                  - listitem [ref=e477]: Up to 25 Stems
+                  - listitem [ref=e479]: 5-Day Delivery
+                  - listitem [ref=e481]: AutoTune / WavesTune Only
+                  - listitem [ref=e483]: 1 Revision
+                  - listitem [ref=e485]: 1 Master
+                - link "Get Started" [ref=e488] [cursor=pointer]:
+                  - /url: https://tealfeed.com/doles_music/connect/call?callType=69f0b4eb03abf7c5fa258689
+                - generic [ref=e490]:
+                  - generic [ref=e491]:
+                    - img [ref=e492]
+                    - generic [ref=e496]: Vocal Production — Dole's Music
+                  - generic [ref=e497]:
+                    - generic [ref=e498]:
+                      - button "Before" [ref=e499] [cursor=pointer]
+                      - button "After" [ref=e501] [cursor=pointer]
+                    - generic [ref=e502]: Mastered
+                  - button "Play" [ref=e504] [cursor=pointer]:
+                    - img [ref=e505]
+                  - generic [ref=e509]:
+                    - img [ref=e510]
+                    - generic [ref=e513]: Streaming Only
+                - generic [ref=e514]:
+                  - img [ref=e515]
+                  - text: Tap to go back
+          - generic [ref=e517]:
+            - generic [ref=e519]:
+              - generic [ref=e520]: Most Popular
+              - heading "The Premium Mix" [level=4] [ref=e521]
+              - paragraph [ref=e523]: 2,000 AED
+              - paragraph [ref=e524]: Deep-dive sonic engineering. Total creative control to perfect every frequency.
+              - list [ref=e525]:
+                - listitem [ref=e526]: Track up to 6–7 min
+                - listitem [ref=e528]: Up to 100 Stems
+                - listitem [ref=e530]: 3 Virtual Sessions
+                - listitem [ref=e532]: 1st Draft in 3 Days
+                - listitem [ref=e534]: Final in 7–10 Days
+                - listitem [ref=e536]: 5 Revisions
+                - listitem [ref=e538]: Manual Tuning — Melodyne & Time Flex
+                - listitem [ref=e540]: 3 Masters
+              - link "Secure Your Session" [ref=e542] [cursor=pointer]:
+                - /url: https://tealfeed.com/doles_music/connect/call?callType=69f0b4eb03abf7c5fa258689
+              - generic [ref=e544]:
+                - generic [ref=e545]:
+                  - img [ref=e546]
+                  - generic [ref=e550]: Production 101 — Dole's Music
+                - generic [ref=e551]:
+                  - generic [ref=e552]:
+                    - button "Before" [ref=e553] [cursor=pointer]
+                    - button "After" [ref=e555] [cursor=pointer]
+                  - generic [ref=e556]: Mastered
+                - button "Play" [ref=e558] [cursor=pointer]:
+                  - img [ref=e559]
+                - generic [ref=e563]:
+                  - img [ref=e564]
+                  - generic [ref=e567]: Streaming Only
+            - generic [ref=e569]:
+              - generic [ref=e571]:
+                - generic [ref=e572]: Most Popular
+                - heading "The Premium Mix" [level=4] [ref=e573]
+                - paragraph [ref=e575]: 2,000 AED
+                - paragraph [ref=e576]: Deep-dive sonic engineering. Total creative control to perfect every frequency.
+                - paragraph [ref=e577]: 8 features included
+                - generic [ref=e578]:
+                  - text: Tap for details
+                  - img [ref=e579]
+              - generic [ref=e582]:
+                - heading "The Premium Mix — 2,000 AED" [level=4] [ref=e583]
+                - list [ref=e585]:
+                  - listitem [ref=e586]: Track up to 6–7 min
+                  - listitem [ref=e588]: Up to 100 Stems
+                  - listitem [ref=e590]: 3 Virtual Sessions
+                  - listitem [ref=e592]: 1st Draft in 3 Days
+                  - listitem [ref=e594]: Final in 7–10 Days
+                  - listitem [ref=e596]: 5 Revisions
+                  - listitem [ref=e598]: Manual Tuning — Melodyne & Time Flex
+                  - listitem [ref=e600]: 3 Masters
+                - link "Secure Your Session" [ref=e603] [cursor=pointer]:
+                  - /url: https://tealfeed.com/doles_music/connect/call?callType=69f0b4eb03abf7c5fa258689
+                - generic [ref=e605]:
+                  - generic [ref=e606]:
+                    - img [ref=e607]
+                    - generic [ref=e611]: Production 101 — Dole's Music
+                  - generic [ref=e612]:
+                    - generic [ref=e613]:
+                      - button "Before" [ref=e614] [cursor=pointer]
+                      - button "After" [ref=e616] [cursor=pointer]
+                    - generic [ref=e617]: Mastered
+                  - button "Play" [ref=e619] [cursor=pointer]:
+                    - img [ref=e620]
+                  - generic [ref=e624]:
+                    - img [ref=e625]
+                    - generic [ref=e628]: Streaming Only
+                - generic [ref=e629]:
+                  - img [ref=e630]
+                  - text: Tap to go back
+      - generic [ref=e632]:
+        - generic [ref=e642]:
+          - heading "Production & Sound Design" [level=3] [ref=e643]
+          - paragraph [ref=e644]: Analog Studio Rack
+        - generic [ref=e645]:
+          - generic [ref=e646]:
+            - generic [ref=e656]:
+              - heading "Vocal Production" [level=4] [ref=e657]
+              - paragraph [ref=e659]: 450 AED
+              - paragraph [ref=e660]: Surgical tuning, pro timing, and vocal textures that make every section shine.
+              - list [ref=e661]:
+                - listitem [ref=e662]: Track up to 4 min
+                - listitem [ref=e664]: Manual Tuning — Melodyne & Auto-Tune
+                - listitem [ref=e666]: Pro Timing (Manual)
+                - listitem [ref=e668]: Vocal Textures per Section
+                - listitem [ref=e670]: 1st Draft in 3 Days
+                - listitem [ref=e672]: 5–6 Day Delivery
+                - listitem [ref=e674]: 3 Revisions
+              - link "Get Started" [ref=e676] [cursor=pointer]:
+                - /url: https://tealfeed.com/doles_music/connect/call?callType=69f0b4eb03abf7c5fa258689
+              - generic [ref=e678]:
+                - generic [ref=e679]:
+                  - img [ref=e680]
+                  - generic [ref=e684]: Vocal Production — Dole's Music
+                - generic [ref=e685]:
+                  - generic [ref=e686]:
+                    - button "Before" [ref=e687] [cursor=pointer]
+                    - button "After" [ref=e689] [cursor=pointer]
+                  - generic [ref=e690]: Mastered
+                - button "Play" [ref=e692] [cursor=pointer]:
+                  - img [ref=e693]
+                - generic [ref=e697]:
+                  - img [ref=e698]
+                  - generic [ref=e701]: Streaming Only
+            - generic [ref=e703]:
+              - generic [ref=e713]:
+                - heading "Vocal Production" [level=4] [ref=e714]
+                - paragraph [ref=e716]: 450 AED
+                - paragraph [ref=e717]: Surgical tuning, pro timing, and vocal textures that make every section shine.
+                - paragraph [ref=e718]: 7 features included
+                - generic [ref=e719]:
+                  - text: Tap for details
+                  - img [ref=e720]
+              - generic [ref=e731]:
+                - heading "Vocal Production — 450 AED" [level=4] [ref=e732]
+                - list [ref=e734]:
+                  - listitem [ref=e735]: Track up to 4 min
+                  - listitem [ref=e737]: Manual Tuning — Melodyne & Auto-Tune
+                  - listitem [ref=e739]: Pro Timing (Manual)
+                  - listitem [ref=e741]: Vocal Textures per Section
+                  - listitem [ref=e743]: 1st Draft in 3 Days
+                  - listitem [ref=e745]: 5–6 Day Delivery
+                  - listitem [ref=e747]: 3 Revisions
+                - link "Get Started" [ref=e750] [cursor=pointer]:
+                  - /url: https://tealfeed.com/doles_music/connect/call?callType=69f0b4eb03abf7c5fa258689
+                - generic [ref=e752]:
+                  - generic [ref=e753]:
+                    - img [ref=e754]
+                    - generic [ref=e758]: Vocal Production — Dole's Music
+                  - generic [ref=e759]:
+                    - generic [ref=e760]:
+                      - button "Before" [ref=e761] [cursor=pointer]
+                      - button "After" [ref=e763] [cursor=pointer]
+                    - generic [ref=e764]: Mastered
+                  - button "Play" [ref=e766] [cursor=pointer]:
+                    - img [ref=e767]
+                  - generic [ref=e771]:
+                    - img [ref=e772]
+                    - generic [ref=e775]: Streaming Only
+                - generic [ref=e776]:
+                  - img [ref=e777]
+                  - text: Tap to go back
+          - generic [ref=e779]:
+            - generic [ref=e789]:
+              - heading "Production 101" [level=4] [ref=e790]
+              - paragraph [ref=e792]: 1,500 AED
+              - paragraph [ref=e793]: Full-scale production with live instruments, drum design, and stem-by-stem delivery.
+              - list [ref=e794]:
+                - listitem [ref=e795]: Track up to 4 min
+                - listitem [ref=e797]: 3 Virtual Sessions
+                - listitem [ref=e799]: Up to 3 Live Instruments
+                - listitem [ref=e801]: Drum Production & Sound Design
+                - listitem [ref=e803]: Stem-by-Stem Delivery
+                - listitem [ref=e805]: Vertical & Horizontal Arrangement
+                - listitem [ref=e807]: 1st Draft in 3 Days
+                - listitem [ref=e809]: 15-Day Total Delivery
+                - listitem [ref=e811]: 3 Revisions
+              - link "Secure Your Session" [ref=e813] [cursor=pointer]:
+                - /url: https://tealfeed.com/doles_music/connect/call?callType=69f0b4eb03abf7c5fa258689
+              - generic [ref=e815]:
+                - generic [ref=e816]:
+                  - img [ref=e817]
+                  - generic [ref=e821]: Production 101 — Dole's Music
+                - generic [ref=e822]:
+                  - generic [ref=e823]:
+                    - button "Before" [ref=e824] [cursor=pointer]
+                    - button "After" [ref=e826] [cursor=pointer]
+                  - generic [ref=e827]: Mastered
+                - button "Play" [ref=e829] [cursor=pointer]:
+                  - img [ref=e830]
+                - generic [ref=e834]:
+                  - img [ref=e835]
+                  - generic [ref=e838]: Streaming Only
+            - generic [ref=e840]:
+              - generic [ref=e850]:
+                - heading "Production 101" [level=4] [ref=e851]
+                - paragraph [ref=e853]: 1,500 AED
+                - paragraph [ref=e854]: Full-scale production with live instruments, drum design, and stem-by-stem delivery.
+                - paragraph [ref=e855]: 9 features included
+                - generic [ref=e856]:
+                  - text: Tap for details
+                  - img [ref=e857]
+              - generic [ref=e868]:
+                - heading "Production 101 — 1,500 AED" [level=4] [ref=e869]
+                - list [ref=e871]:
+                  - listitem [ref=e872]: Track up to 4 min
+                  - listitem [ref=e874]: 3 Virtual Sessions
+                  - listitem [ref=e876]: Up to 3 Live Instruments
+                  - listitem [ref=e878]: Drum Production & Sound Design
+                  - listitem [ref=e880]: Stem-by-Stem Delivery
+                  - listitem [ref=e882]: Vertical & Horizontal Arrangement
+                  - listitem [ref=e884]: 1st Draft in 3 Days
+                  - listitem [ref=e886]: 15-Day Total Delivery
+                  - listitem [ref=e888]: 3 Revisions
+                - link "Secure Your Session" [ref=e891] [cursor=pointer]:
+                  - /url: https://tealfeed.com/doles_music/connect/call?callType=69f0b4eb03abf7c5fa258689
+                - generic [ref=e893]:
+                  - generic [ref=e894]:
+                    - img [ref=e895]
+                    - generic [ref=e899]: Production 101 — Dole's Music
+                  - generic [ref=e900]:
+                    - generic [ref=e901]:
+                      - button "Before" [ref=e902] [cursor=pointer]
+                      - button "After" [ref=e904] [cursor=pointer]
+                    - generic [ref=e905]: Mastered
+                  - button "Play" [ref=e907] [cursor=pointer]:
+                    - img [ref=e908]
+                  - generic [ref=e912]:
+                    - img [ref=e913]
+                    - generic [ref=e916]: Streaming Only
+                - generic [ref=e917]:
+                  - img [ref=e918]
+                  - text: Tap to go back
+          - generic [ref=e920]:
+            - generic [ref=e930]:
+              - generic [ref=e931]: Full Creative Suite
+              - heading "Premium Prod" [level=4] [ref=e932]
+              - paragraph [ref=e934]: 3,000 AED
+              - paragraph [ref=e935]: The ultimate production experience — unlimited revisions, genre diversity, and vocal production included.
+              - list [ref=e936]:
+                - listitem [ref=e937]: Track up to 6 min
+                - listitem [ref=e939]: 5 Virtual Sessions
+                - listitem [ref=e941]: Unlimited Revisions
+                - listitem [ref=e943]: Vocal Production Included
+                - listitem [ref=e945]: Up to 7 Live Instruments
+                - listitem [ref=e947]: Genre Diversity in One Track
+                - listitem [ref=e949]: 1st Draft in 5 Days
+                - listitem [ref=e951]: 20-Day Total Delivery
+              - link "Secure Your Session" [ref=e953] [cursor=pointer]:
+                - /url: https://tealfeed.com/doles_music/connect/call?callType=69f0b4eb03abf7c5fa258689
+              - generic [ref=e955]:
+                - generic [ref=e956]:
+                  - img [ref=e957]
+                  - generic [ref=e961]: Premium Production — Dole's Music
+                - generic [ref=e962]:
+                  - generic [ref=e963]:
+                    - button "Before" [ref=e964] [cursor=pointer]
+                    - button "After" [ref=e966] [cursor=pointer]
+                  - generic [ref=e967]: Mastered
+                - button "Play" [ref=e969] [cursor=pointer]:
+                  - img [ref=e970]
+                - generic [ref=e974]:
+                  - img [ref=e975]
+                  - generic [ref=e978]: Streaming Only
+            - generic [ref=e980]:
+              - generic [ref=e990]:
+                - generic [ref=e991]: Full Creative Suite
+                - heading "Premium Prod" [level=4] [ref=e992]
+                - paragraph [ref=e994]: 3,000 AED
+                - paragraph [ref=e995]: The ultimate production experience — unlimited revisions, genre diversity, and vocal production included.
+                - paragraph [ref=e996]: 8 features included
+                - generic [ref=e997]:
+                  - text: Tap for details
+                  - img [ref=e998]
+              - generic [ref=e1009]:
+                - heading "Premium Prod — 3,000 AED" [level=4] [ref=e1010]
+                - list [ref=e1012]:
+                  - listitem [ref=e1013]: Track up to 6 min
+                  - listitem [ref=e1015]: 5 Virtual Sessions
+                  - listitem [ref=e1017]: Unlimited Revisions
+                  - listitem [ref=e1019]: Vocal Production Included
+                  - listitem [ref=e1021]: Up to 7 Live Instruments
+                  - listitem [ref=e1023]: Genre Diversity in One Track
+                  - listitem [ref=e1025]: 1st Draft in 5 Days
+                  - listitem [ref=e1027]: 20-Day Total Delivery
+                - link "Secure Your Session" [ref=e1030] [cursor=pointer]:
+                  - /url: https://tealfeed.com/doles_music/connect/call?callType=69f0b4eb03abf7c5fa258689
+                - generic [ref=e1032]:
+                  - generic [ref=e1033]:
+                    - img [ref=e1034]
+                    - generic [ref=e1038]: Premium Production — Dole's Music
+                  - generic [ref=e1039]:
+                    - generic [ref=e1040]:
+                      - button "Before" [ref=e1041] [cursor=pointer]
+                      - button "After" [ref=e1043] [cursor=pointer]
+                    - generic [ref=e1044]: Mastered
+                  - button "Play" [ref=e1046] [cursor=pointer]:
+                    - img [ref=e1047]
+                  - generic [ref=e1051]:
+                    - img [ref=e1052]
+                    - generic [ref=e1055]: Streaming Only
+                - generic [ref=e1056]:
+                  - img [ref=e1057]
+                  - text: Tap to go back
+      - generic [ref=e1059]:
+        - generic [ref=e1060]:
+          - heading "Add-Ons & Blitz Deals" [level=3] [ref=e1061]
+          - paragraph [ref=e1062]: Backstage Access
+        - generic [ref=e1063]:
+          - generic [ref=e1064]:
+            - generic [ref=e1066]:
+              - heading "Reel Audio" [level=4] [ref=e1067]
+              - generic [ref=e1068]:
+                - paragraph [ref=e1069]: 600 AED
+                - paragraph [ref=e1070]: 680 AED
+              - paragraph [ref=e1071]: A compact, fully produced acoustic arrangement — mixed and mastered to perfection.
+              - list [ref=e1072]:
+                - listitem [ref=e1073]: Track up to 1:30 min
+                - listitem [ref=e1075]: Up to 3 Live Instruments
+                - listitem [ref=e1077]: 1st Draft in 2 Days
+                - listitem [ref=e1079]: Fully Mixed & Mastered
+                - listitem [ref=e1081]: Acoustic Arrangement — Full in 5 Days
+                - listitem [ref=e1083]: No Virtual Sessions
+                - listitem [ref=e1085]: 3 Revisions
+              - link "Get Started" [ref=e1087] [cursor=pointer]:
+                - /url: https://tealfeed.com/doles_music/connect/call?callType=69f0b4eb03abf7c5fa258689
+            - generic [ref=e1089]:
+              - generic [ref=e1091]:
+                - heading "Reel Audio" [level=4] [ref=e1092]
+                - generic [ref=e1093]:
+                  - paragraph [ref=e1094]: 600 AED
+                  - paragraph [ref=e1095]: 680 AED
+                - paragraph [ref=e1096]: A compact, fully produced acoustic arrangement — mixed and mastered to perfection.
+                - paragraph [ref=e1097]: 7 features included
+                - generic [ref=e1098]:
+                  - text: Tap for details
+                  - img [ref=e1099]
+              - generic [ref=e1102]:
+                - heading "Reel Audio — 600 AED" [level=4] [ref=e1103]
+                - list [ref=e1105]:
+                  - listitem [ref=e1106]: Track up to 1:30 min
+                  - listitem [ref=e1108]: Up to 3 Live Instruments
+                  - listitem [ref=e1110]: 1st Draft in 2 Days
+                  - listitem [ref=e1112]: Fully Mixed & Mastered
+                  - listitem [ref=e1114]: Acoustic Arrangement — Full in 5 Days
+                  - listitem [ref=e1116]: No Virtual Sessions
+                  - listitem [ref=e1118]: 3 Revisions
+                - link "Get Started" [ref=e1121] [cursor=pointer]:
+                  - /url: https://tealfeed.com/doles_music/connect/call?callType=69f0b4eb03abf7c5fa258689
+                - generic [ref=e1122]:
+                  - img [ref=e1123]
+                  - text: Tap to go back
+          - generic [ref=e1126]:
+            - heading "Skip-the-Line Delivery" [level=4] [ref=e1127]
+            - paragraph [ref=e1128]: “Need it yesterday?”
+            - generic [ref=e1129]:
+              - generic [ref=e1130]:
+                - generic [ref=e1131]: 48-Hour Rush
+                - generic [ref=e1132]:
+                  - generic [ref=e1133]: +200 AED per track
+                  - link "Book" [ref=e1134] [cursor=pointer]:
+                    - /url: https://tealfeed.com/doles_music/connect/call?callType=69f0b4eb03abf7c5fa258689
+              - generic [ref=e1135]:
+                - generic [ref=e1136]: 24-Hour Blitz
+                - generic [ref=e1137]:
+                  - generic [ref=e1138]: +500 AED per track
+                  - link "Book" [ref=e1139] [cursor=pointer]:
+                    - /url: https://tealfeed.com/doles_music/connect/call?callType=69f0b4eb03abf7c5fa258689
+    - generic [ref=e1141]:
+      - generic [ref=e1142]: Hero MotoCorp·
+      - generic [ref=e1143]: Himalaya·
+      - generic [ref=e1144]: Apex Hospitals·
+      - generic [ref=e1145]: Vision11·
+      - generic [ref=e1146]: Wrestling Extreme Mania·
+      - generic [ref=e1147]: Vridhi Home Finance·
+      - generic [ref=e1148]: Hero MotoCorp·
+      - generic [ref=e1149]: Himalaya·
+      - generic [ref=e1150]: Apex Hospitals·
+      - generic [ref=e1151]: Vision11·
+      - generic [ref=e1152]: Wrestling Extreme Mania·
+      - generic [ref=e1153]: Vridhi Home Finance·
+      - generic [ref=e1154]: Hero MotoCorp·
+      - generic [ref=e1155]: Himalaya·
+      - generic [ref=e1156]: Apex Hospitals·
+      - generic [ref=e1157]: Vision11·
+      - generic [ref=e1158]: Wrestling Extreme Mania·
+      - generic [ref=e1159]: Vridhi Home Finance·
+      - generic [ref=e1160]: Hero MotoCorp·
+      - generic [ref=e1161]: Himalaya·
+      - generic [ref=e1162]: Apex Hospitals·
+      - generic [ref=e1163]: Vision11·
+      - generic [ref=e1164]: Wrestling Extreme Mania·
+      - generic [ref=e1165]: Vridhi Home Finance·
+    - generic [ref=e1167]:
+      - img "Engineer in studio" [ref=e1169]
+      - img "Mixing session" [ref=e1171]
+      - img "Guitar recording" [ref=e1173]
+      - img "Studio gear" [ref=e1175]
+      - img "Guitar collection" [ref=e1177]
+      - img "Red-lit session" [ref=e1179]
+      - img "Acoustic session" [ref=e1181]
+      - img "Engineer in studio" [ref=e1183]
+      - img "Mixing session" [ref=e1185]
+      - img "Guitar recording" [ref=e1187]
+      - img "Studio gear" [ref=e1189]
+      - img "Guitar collection" [ref=e1191]
+      - img "Red-lit session" [ref=e1193]
+      - img "Acoustic session" [ref=e1195]
+    - generic [ref=e1196]:
+      - paragraph [ref=e1197]: TESTIMONIALS
+      - heading "What Artists Say" [level=2] [ref=e1198]
+      - paragraph [ref=e1199]: Real stories from artists who trusted us with their sound.
+      - generic [ref=e1202]:
+        - generic [ref=e1203]:
+          - img [ref=e1204]
+          - blockquote [ref=e1206]: “Working with Dole’s Music felt genuinely empowering. The experience was smooth from start to finish, with clear communication, strong organization, and real respect for my creative vision.”
+          - generic [ref=e1207]:
+            - generic [ref=e1208]: "Y"
+            - generic [ref=e1209]:
+              - paragraph [ref=e1210]: Yashaswi
+              - paragraph [ref=e1211]: Artist
+        - generic [ref=e1212]:
+          - img [ref=e1213]
+          - blockquote [ref=e1215]: “Well from before starting any track they listen to the kind of output as an artist I am expecting and they do provide a demo first to basically fix the arrangement. Which makes the work easier and even they don’t ask for full payment before start making the track.”
+          - generic [ref=e1216]:
+            - generic [ref=e1217]: P
+            - generic [ref=e1218]:
+              - paragraph [ref=e1219]: Pritam
+              - paragraph [ref=e1220]: Artist
+        - generic [ref=e1221]:
+          - img [ref=e1222]
+          - blockquote [ref=e1224]: “First of all, the team understands the vibes, so it’s easy to create good music. They know the life of an independent artist is not easy, especially financially, so they offer flexible payment options which really help. They are also making sure to help with promotion, which is just amazing.”
+          - generic [ref=e1225]:
+            - generic [ref=e1226]: Z
+            - generic [ref=e1227]:
+              - paragraph [ref=e1228]: Zindagi Mubarak
+              - paragraph [ref=e1229]: Artist
+        - generic [ref=e1230]:
+          - img [ref=e1231]
+          - blockquote [ref=e1233]: “What made the process easier for me as an artist was that sound engineers never created unnecessary pressure around the work. He always takes the time to understand my vision first and communicates everything clearly. Even if I make mistakes, he handles them very calmly and supportively.”
+          - generic [ref=e1234]:
+            - generic [ref=e1235]: "Y"
+            - generic [ref=e1236]:
+              - paragraph [ref=e1237]: Yashaswi
+              - paragraph [ref=e1238]: Artist
+        - generic [ref=e1239]:
+          - img [ref=e1240]
+          - blockquote [ref=e1242]: “I would honestly say that the team at Dole’s Music is one of the best to work with. They really know how to bring out the best in an artist. No matter what the genre is, they approach every song with a fresh mindset and create something truly unique and high quality. If you ever get the chance to work with Dole’s Music, don’t miss it.”
+          - generic [ref=e1243]:
+            - generic [ref=e1244]: M
+            - generic [ref=e1245]:
+              - paragraph [ref=e1246]: Meraki
+              - paragraph [ref=e1247]: Artist
+        - generic [ref=e1248]:
+          - img [ref=e1249]
+          - blockquote [ref=e1251]: “Working with Dole’s Music felt genuinely empowering. The experience was smooth from start to finish, with clear communication, strong organization, and real respect for my creative vision.”
+          - generic [ref=e1252]:
+            - generic [ref=e1253]: "Y"
+            - generic [ref=e1254]:
+              - paragraph [ref=e1255]: Yashaswi
+              - paragraph [ref=e1256]: Artist
+        - generic [ref=e1257]:
+          - img [ref=e1258]
+          - blockquote [ref=e1260]: “Well from before starting any track they listen to the kind of output as an artist I am expecting and they do provide a demo first to basically fix the arrangement. Which makes the work easier and even they don’t ask for full payment before start making the track.”
+          - generic [ref=e1261]:
+            - generic [ref=e1262]: P
+            - generic [ref=e1263]:
+              - paragraph [ref=e1264]: Pritam
+              - paragraph [ref=e1265]: Artist
+        - generic [ref=e1266]:
+          - img [ref=e1267]
+          - blockquote [ref=e1269]: “First of all, the team understands the vibes, so it’s easy to create good music. They know the life of an independent artist is not easy, especially financially, so they offer flexible payment options which really help. They are also making sure to help with promotion, which is just amazing.”
+          - generic [ref=e1270]:
+            - generic [ref=e1271]: Z
+            - generic [ref=e1272]:
+              - paragraph [ref=e1273]: Zindagi Mubarak
+              - paragraph [ref=e1274]: Artist
+        - generic [ref=e1275]:
+          - img [ref=e1276]
+          - blockquote [ref=e1278]: “What made the process easier for me as an artist was that sound engineers never created unnecessary pressure around the work. He always takes the time to understand my vision first and communicates everything clearly. Even if I make mistakes, he handles them very calmly and supportively.”
+          - generic [ref=e1279]:
+            - generic [ref=e1280]: "Y"
+            - generic [ref=e1281]:
+              - paragraph [ref=e1282]: Yashaswi
+              - paragraph [ref=e1283]: Artist
+        - generic [ref=e1284]:
+          - img [ref=e1285]
+          - blockquote [ref=e1287]: “I would honestly say that the team at Dole’s Music is one of the best to work with. They really know how to bring out the best in an artist. No matter what the genre is, they approach every song with a fresh mindset and create something truly unique and high quality. If you ever get the chance to work with Dole’s Music, don’t miss it.”
+          - generic [ref=e1288]:
+            - generic [ref=e1289]: M
+            - generic [ref=e1290]:
+              - paragraph [ref=e1291]: Meraki
+              - paragraph [ref=e1292]: Artist
+    - generic [ref=e1294]:
+      - generic [ref=e1295]:
+        - paragraph [ref=e1296]: About
+        - heading "The Studio" [level=2] [ref=e1297]
+        - paragraph [ref=e1298]: Dole’s Music is a Mumbai-based audio production house bringing together world-class engineering talent with a passion for sonic excellence. We deliver premium mixing, mastering, and sound design remotely to artists, brands, and storytellers across the Gulf — from chart-topping records to bespoke brand soundscapes, every project is crafted with intention.
+        - generic [ref=e1299]:
+          - link "Let's Talk" [ref=e1300] [cursor=pointer]:
+            - /url: https://wa.me/917259356149
+            - img [ref=e1301]
+            - text: Let's Talk
+          - link "Book a Session" [ref=e1303] [cursor=pointer]:
+            - /url: https://tealfeed.com/doles_music/connect/call?callType=69f0b4eb03abf7c5fa258689
+            - text: Book a Session
+            - img [ref=e1304]
+      - generic [ref=e1306]:
+        - img "Guitar session — blue studio lighting" [ref=e1308]
+        - img "Engineer mixing at DAW" [ref=e1310]
+        - img "Studio equipment close-up" [ref=e1312]
+    - generic [ref=e1313]:
+      - heading "Ready to Elevate Your Sound?" [level=2] [ref=e1314]
+      - link "Book Free Consultation" [ref=e1315] [cursor=pointer]:
+        - /url: "#services"
+    - generic [ref=e1317]:
+      - generic [ref=e1318]:
+        - generic [ref=e1319]:
+          - paragraph [ref=e1320]: Dole’s Music
+          - paragraph [ref=e1321]: World-class audio production and sonic engineering, delivering premium results for artists, brands, and filmmakers.
+          - generic [ref=e1322]:
+            - img [ref=e1323]
+            - generic [ref=e1326]: Mumbai, India
+        - generic [ref=e1327]:
+          - paragraph [ref=e1328]: Contact
+          - generic [ref=e1329]:
+            - link "sastha@dolesmusic.com" [ref=e1330] [cursor=pointer]:
+              - /url: mailto:sastha@dolesmusic.com
+            - link "+91 7259356149" [ref=e1331] [cursor=pointer]:
+              - /url: tel:+917259356149
+            - link "WhatsApp" [ref=e1332] [cursor=pointer]:
+              - /url: https://wa.me/917259356149
+              - img [ref=e1333]
+              - text: WhatsApp
+      - generic [ref=e1335]:
+        - paragraph [ref=e1336]: © 2026 Dole’s Music. All rights reserved.
+        - generic [ref=e1337]:
+          - link "Instagram" [ref=e1338] [cursor=pointer]:
+            - /url: https://www.instagram.com/dolesmusic_official/
+            - img [ref=e1339]
+          - link "LinkedIn" [ref=e1342] [cursor=pointer]:
+            - /url: https://www.linkedin.com/company/dolesmusic
+            - img [ref=e1343]
+  - generic [ref=e1348]:
+    - generic [ref=e1349]: Limited slots this month
+    - link "Book a Session" [ref=e1350] [cursor=pointer]:
+      - /url: https://tealfeed.com/doles_music/connect/call?callType=69f0b4eb03abf7c5fa258689
