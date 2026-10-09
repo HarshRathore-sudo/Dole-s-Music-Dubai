@@ -1,6 +1,6 @@
 /* ══════════════════════════════════════════════════════════════
    Global Audio Manager — singleton that ensures only one audio
-   source plays at a time across the entire Dubai page.
+   source plays at a time across the entire page.
 
    Usage:
      import { globalAudioManager } from './globalAudioManager';

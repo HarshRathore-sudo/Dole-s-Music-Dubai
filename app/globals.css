@@ -1,24 +1,11 @@
 @import "tailwindcss";
 
-/* Base: all text uses Cormorant Garamond (elegant serif with cursive quality) */
+/* Base: clean sans-serif (system stack) matching dolesmusic.com */
 body {
-  font-family: var(--font-body), 'Georgia', serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 }
 
-/* Headings: Playfair Display (luxury editorial serif) */
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-playfair), 'Georgia', serif;
-}
-
+/* Headings: Playfair Display for logo & occasional serif headings */
 .font-playfair {
   font-family: var(--font-playfair), 'Georgia', serif;
-}
-
-.font-body {
-  font-family: var(--font-body), 'Georgia', serif;
-}
-
-.font-body-italic {
-  font-family: var(--font-body), 'Georgia', serif;
-  font-style: italic;
 }

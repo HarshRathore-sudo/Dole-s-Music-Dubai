@@ -1,5 +1,5 @@
-import DubaiLandingPage from '@/components/dubai/DubaiLandingPage';
+import LandingPage from '@/components/landing/LandingPage';
 
 export default function Home() {
-  return <DubaiLandingPage />;
+  return <LandingPage />;
 }

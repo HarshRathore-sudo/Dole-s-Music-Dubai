@@ -930,8 +930,7 @@ export default function SecureBeatsPlayer({
           }}>
             <a
               href={ctaLink}
-              target="_blank"
-              rel="noopener noreferrer"
+              {...(ctaLink.startsWith('#') ? {} : { target: '_blank', rel: 'noopener noreferrer' })}
               className="cta-nav pricing-cta"
               style={{
                 display: 'inline-flex',

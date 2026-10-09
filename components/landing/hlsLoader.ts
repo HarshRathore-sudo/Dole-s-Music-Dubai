@@ -26,7 +26,7 @@ export function resolveHlsUrl(src: string): string {
   if (src.startsWith('http://') || src.startsWith('https://')) {
     return src;
   }
-  // Folder key (uppercase with underscores) → proxy through nginx
+  // Folder key (uppercase with underscores) → proxy through Next.js rewrite
   if (/^[A-Z0-9_]+$/.test(src)) {
     return `/hls/${src}/playlist.m3u8`;
   }

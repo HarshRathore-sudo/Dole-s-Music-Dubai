@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { Playfair_Display, Cormorant_Garamond } from 'next/font/google';
 import Script from 'next/script';
 import './globals.css';
-import './dubai-tokens.css';
+import './tokens.css';
 
 const playfair = Playfair_Display({
   subsets: ['latin'],
@@ -21,11 +21,11 @@ const cormorant = Cormorant_Garamond({
 });
 
 export const metadata: Metadata = {
-  title: "Serving Dubai | Dole's Music",
-  description: "Premium mixing, mastering, and sound design delivered remotely to Dubai's artists, brands, and storytellers — studio-quality results, anywhere you are.",
+  title: "Serving Canada | Dole's Music",
+  description: "Premium mixing, mastering, and sound design delivered remotely to Canada's artists, brands, and storytellers — studio-quality results, anywhere you are.",
   icons: {
-    icon: '/icon.svg',
-    apple: '/icon.svg',
+    icon: '/favicon.png',
+    apple: '/favicon.png',
   },
 };
 
@@ -60,6 +60,22 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           })();
         `}</Script>
         {children}
+        <Script id="chatwoot-sdk" strategy="afterInteractive">{`
+          window.chatwootSettings = {"position":"right","type":"standard","launcherTitle":""};
+          (function(d,t) {
+            var BASE_URL="https://app.chatwoot.com";
+            var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+            g.src=BASE_URL+"/packs/js/sdk.js";
+            g.async=true;
+            s.parentNode.insertBefore(g,s);
+            g.onload=function(){
+              window.chatwootSDK.run({
+                websiteToken: 'SBHERwB9886i4i8RaCnxwkCm',
+                baseUrl: BASE_URL
+              })
+            }
+          })(document,"script");
+        `}</Script>
       </body>
     </html>
   );
